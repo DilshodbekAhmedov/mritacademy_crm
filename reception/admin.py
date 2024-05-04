@@ -1,3 +1,3 @@
 from django.contrib import admin
-
-# Register your models here.
+from reception.models import *
+admin.site.register(Reception)
