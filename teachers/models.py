@@ -23,7 +23,7 @@ class Teacher(models.Model):
         return self.full_name
 
     class Meta:
-        ordering = ['full_name']
+        ordering = ['-id']
         verbose_name = 'Teacher'
         verbose_name_plural = 'Teachers'
 

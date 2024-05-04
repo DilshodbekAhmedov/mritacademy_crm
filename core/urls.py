@@ -19,9 +19,15 @@ from django.contrib.messages import api
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
+from core.router import DefaultRouter
+from teachers.urls import router as teacher_router
+
+
+router = DefaultRouter()
+router.extend(teacher_router)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/', include('teachers.urls')),
-    path('', include('teachers.urls')),
+    path('api/', include(router.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
