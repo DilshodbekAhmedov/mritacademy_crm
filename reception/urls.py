@@ -4,5 +4,7 @@ from .views import *
 
     
 router = SimpleRouter()
-router.register(r'enroll-courses', EnrollCourseViewSet)
-urlpatterns = router.urls
+router.register(r'reception', EnrollCourseViewSet)
+urlpatterns = [
+
+]

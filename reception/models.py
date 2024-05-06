@@ -14,7 +14,7 @@ class EnrollCourse(models.Model):
     course = models.ForeignKey(Course, max_length=256, on_delete=models.PROTECT)
     time = models.CharField(max_length=10)
     days = models.CharField(max_length=40, choices=DAYS)
-    created_time = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f'{self.name} {self.course}'
